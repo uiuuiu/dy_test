@@ -1,3 +1,5 @@
+## RUN GOOGLE SEARCHING THEN INSERT TO DATABASE
+#
 module OpGoogleSearchMachine
 	class SearchWithKeywordDataOperation
 		extend BaseOperation
@@ -6,6 +8,7 @@ module OpGoogleSearchMachine
 		def self.run!(data, params={})
 			super
 			search_with_csv_data
+			insert_search_result_to_db(keyword_obj, search_result)
 		end
 
 		## Operation layer actions
@@ -16,8 +19,6 @@ module OpGoogleSearchMachine
 					keyword_obj = Keyword.find_or_create_by(name: keyword.first, user_id: @data[:user].id)
 					search_machine = GgAdsSearchMachine::SearchMachine.new(keyword_obj.name)
 					search_result = search_machine.search
-
-					insert_search_result_to_db(keyword_obj, search_result)
 				end
 			end
 

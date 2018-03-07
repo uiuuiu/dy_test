@@ -15,7 +15,7 @@ module GgAdsSearchMachine
 					total_non_ads: calculate_non_ads,
 					total_number_of_links: calculate_total_number_of_links,
 					total_of_search_results: calculate_total_of_search_results,
-					html_content: get_html_content,
+					html_content: get_html_content
 					)
 			end
 

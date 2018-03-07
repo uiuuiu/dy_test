@@ -1,3 +1,5 @@
+## GET CSV DATA FOR GOOGLE SEARCHING
+#
 module OpGoogleSearchMachine
 	class UploadKeywordsFileOperation
 		extend BaseOperation
