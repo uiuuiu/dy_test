@@ -70,3 +70,8 @@ gem 'oauth2'
 gem 'devise-doorkeeper'
 # gem 'doorkeeper'
 gem 'active_model_serializers', '~> 0.10.0'
+
+gem 'nokogiri'
+
+# CSV gems
+gem 'roo'
