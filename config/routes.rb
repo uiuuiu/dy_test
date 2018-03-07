@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   namespace 'api' do
     resources :welcome
   end
+
+  resources :google_search_machine, only: [:index] do
+  	collection do
+  		post "/" => "google_search_machine#upload"
+  	end
+  end
 end

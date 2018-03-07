@@ -1,0 +1,2 @@
+class Adswork < ApplicationRecord
+end
